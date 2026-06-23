@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - Gardabudaya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdfaf2',
+              100: '#fbeedb',
+              200: '#f6daa9',
+              300: '#eebd6a',
+              400: '#e59d35',
+              500: '#ca7d1d',
+              600: '#b06115',
+              700: '#904713',
+              800: '#753914',
+              900: '#5f2f13',
+              950: '#341607',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-stone-50 text-stone-800 flex flex-col min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200/80 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo & Title -->
+        <a href="/" class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-brand-700 rounded-full flex items-center justify-center text-white shadow-md">
+            <i class="fa-solid fa-gopuram text-2xl"></i>
+          </div>
+          <div>
+            <span class="block text-xl font-bold tracking-wider text-brand-800 leading-none">GARDABUDAYA</span>
+            <span class="block text-xs text-stone-500 font-medium tracking-wide mt-1">Yayasan Rakai Mataram Agung</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 font-medium text-stone-600">
+          <a href="/" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2 text-sm transition">Beranda</a>
+          <a href="/tentang.html" class="text-brand-700 border-b-2 border-brand-700 px-1 py-2 text-sm transition">Tentang</a>
+          <a href="/program.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2 text-sm transition">Program</a>
+          <a href="/kemitraan.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2 text-sm transition">Kemitraan</a>
+          <a href="/berita.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2 text-sm transition">Berita</a>
+          <a href="/galeri.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2 text-sm transition">Galeri</a>
+          <a href="/relawan.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2 text-sm transition">Relawan</a>
+          <a href="/kontak.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2 text-sm transition">Kontak</a>
+        </nav>
+
+        <!-- CTA & Mobile Toggle -->
+        <div class="flex items-center gap-4">
+          <a href="/donasi.html" class="hidden sm:inline-flex px-5 py-2.5 bg-brand-700 hover:bg-brand-800 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition text-sm">
+            <i class="fa-solid fa-heart mr-2 mt-0.5"></i> Donasi
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-stone-600 hover:text-brand-700 transition" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-stone-200 bg-white shadow-inner">
+      <div class="px-4 py-3 space-y-1">
+        <a href="/" class="block px-3 py-2.5 rounded-md text-stone-600 hover:bg-stone-50 hover:text-brand-700 font-medium text-base">Beranda</a>
+        <a href="/tentang.html" class="block px-3 py-2.5 rounded-md bg-brand-50 text-brand-700 font-semibold text-base">Tentang</a>
+        <a href="/program.html" class="block px-3 py-2.5 rounded-md text-stone-600 hover:bg-stone-50 hover:text-brand-700 font-medium text-base">Program</a>
+        <a href="/kemitraan.html" class="block px-3 py-2.5 rounded-md text-stone-600 hover:bg-stone-50 hover:text-brand-700 font-medium text-base">Kemitraan</a>
+        <a href="/berita.html" class="block px-3 py-2.5 rounded-md text-stone-600 hover:bg-stone-50 hover:text-brand-700 font-medium text-base">Berita</a>
+        <a href="/galeri.html" class="block px-3 py-2.5 rounded-md text-stone-600 hover:bg-stone-50 hover:text-brand-700 font-medium text-base">Galeri</a>
+        <a href="/relawan.html" class="block px-3 py-2.5 rounded-md text-stone-600 hover:bg-stone-50 hover:text-brand-700 font-medium text-base">Relawan</a>
+        <a href="/kontak.html" class="block px-3 py-2.5 rounded-md text-stone-600 hover:bg-stone-50 hover:text-brand-700 font-medium text-base">Kontak</a>
+        <div class="pt-4 pb-2 border-t border-stone-100">
+          <a href="/donasi.html" class="block w-full py-3 text-center bg-brand-700 hover:bg-brand-800 text-white font-semibold rounded-lg shadow-md transition">
+            <i class="fa-solid fa-heart mr-2"></i> Donasi Sekarang
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMBS & PAGE HEADER -->
+  <section class="bg-stone-900 text-white py-12 border-b border-stone-800 relative overflow-hidden">
+    <!-- Overlay Pattern -->
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#e59d35_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex text-xs uppercase tracking-widest text-brand-300 font-semibold mb-3 gap-2 items-center">
+        <a href="/" class="hover:text-white transition">Beranda</a>
+        <span class="text-stone-600">/</span>
+        <span class="text-stone-300">Tentang Kami</span>
+      </nav>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Tentang RMA Foundation</h1>
+    </div>
+  </section>
+
+  <!-- FILOSOFI & VISI MISI DETAIL -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        
+        <!-- Left Side: Navigasi Anchor -->
+        <aside class="lg:col-span-3 sticky top-28 hidden lg:block bg-stone-50 p-6 rounded-xl border border-stone-200/60">
+          <h3 class="font-bold text-stone-900 text-sm tracking-wider uppercase mb-4 pb-2 border-b border-stone-200">Navigasi Halaman</h3>
+          <ul class="space-y-3 font-semibold text-sm text-stone-600">
+            <li><a href="#filosofi" class="block hover:text-brand-700 transition px-2 py-1.5 rounded hover:bg-white border-l-2 border-transparent hover:border-brand-600">Filosofi Yayasan</a></li>
+            <li><a href="#visi-misi" class="block hover:text-brand-700 transition px-2 py-1.5 rounded hover:bg-white border-l-2 border-transparent hover:border-brand-600">Visi & Misi</a></li>
+            <li><a href="#nilai" class="block hover:text-brand-700 transition px-2 py-1.5 rounded hover:bg-white border-l-2 border-transparent hover:border-brand-600">Nilai-Nilai Detail</a></li>
+            <li><a href="#legalitas" class="block hover:text-brand-700 transition px-2 py-1.5 rounded hover:bg-white border-l-2 border-transparent hover:border-brand-600">Legalitas & SK</a></li>
+            <li><a href="#transparansi" class="block hover:text-brand-700 transition px-2 py-1.5 rounded hover:bg-white border-l-2 border-transparent hover:border-brand-600">Transparansi Laporan</a></li>
+          </ul>
+        </aside>
+
+        <!-- Right Side: Content -->
+        <main class="lg:col-span-9 space-y-24">
+          
+          <!-- FILOSOFI -->
+          <div id="filosofi" class="scroll-mt-28" data-aos="fade-up">
+            <span class="text-brand-700 font-bold tracking-wider uppercase text-xs block mb-2">Filosofi Pergerakan</span>
+            <h2 class="text-3xl font-bold text-stone-900 mb-6">Filosofi Yayasan</h2>
+            <div class="prose prose-stone text-stone-700 text-lg leading-relaxed space-y-6 max-w-none">
+              <p>
+                RMA Foundation percaya bahwa budaya bukanlah sekadar peninggalan masa lalu yang statis, melainkan fondasi hidup dan roh yang menggerakkan arah masa depan suatu bangsa. Pelestarian kebudayaan tidak boleh dipandang secara terpisah, melainkan harus saling berkelindan secara dinamis dengan peningkatan mutu pendidikan, kemajuan teknologi, kesejahteraan ekonomi kreatif, dan ketahanan pertanian.
+              </p>
+              <blockquote class="border-l-4 border-brand-700 pl-6 py-2 my-8 italic font-serif text-brand-900 bg-brand-50/40 rounded-r-lg">
+                "Budaya harus hidup, terus berkembang, dan memberikan dampak nyata yang menyejahterakan kehidupan seluruh elemen masyarakat."
+              </blockquote>
+              <p>
+                Melalui filosofi ini, setiap program yang dirancang di bawah naungan Yayasan Rakai Mataram Agung selalu mengutamakan harmoni antara nilai kearifan lokal Nusantara (khususnya *Hamemayu Hayuning Bawono*) dengan tuntutan kemajuan dunia modern.
+              </p>
+            </div>
+          </div>
+
+          <!-- VISI & MISI -->
+          <div id="visi-misi" class="scroll-mt-28 border-t border-stone-100 pt-16" data-aos="fade-up">
+            <span class="text-brand-700 font-bold tracking-wider uppercase text-xs block mb-2">Cita & Komitmen</span>
+            <h2 class="text-3xl font-bold text-stone-900 mb-8">Visi & Misi</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+              <!-- Visi Card -->
+              <div class="bg-brand-50/30 rounded-2xl p-8 border border-brand-100/60 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-700 mb-6">
+                    <i class="fa-solid fa-eye text-xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-stone-900 mb-4">Visi Kami</h3>
+                  <p class="text-stone-700 leading-relaxed">
+                    Menjadi lembaga pelestarian budaya dan pemberdayaan masyarakat terdepan yang berkontribusi secara nyata pada pembangunan peradaban bangsa melalui penguatan pendidikan karakter, ekonomi kreatif mandiri, dan pelestarian nilai budaya Nusantara.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Misi Card -->
+              <div class="bg-stone-50 rounded-2xl p-8 border border-stone-200/60 shadow-sm">
+                <div class="w-12 h-12 bg-stone-200 rounded-xl flex items-center justify-center text-stone-700 mb-6">
+                  <i class="fa-solid fa-bullseye text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-stone-900 mb-4">Misi Kami</h3>
+                <ul class="space-y-3.5 text-sm text-stone-700">
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-check text-brand-600 mt-1 flex-shrink-0"></i>
+                    <span>Mengembangkan sistem pendidikan unggul berbasis nilai karakter dan budaya Nusantara.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-check text-brand-600 mt-1 flex-shrink-0"></i>
+                    <span>Melestarikan warisan seni, sejarah, adat, dan tradisi budaya Nusantara agar tetap relevan.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-check text-brand-600 mt-1 flex-shrink-0"></i>
+                    <span>Memperkuat perekonomian mandiri masyarakat melalui industri ekonomi kreatif berbasis tradisi.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-check text-brand-600 mt-1 flex-shrink-0"></i>
+                    <span>Mengembangkan pertanian organik berkelanjutan yang harmonis dengan kearifan lokal.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i class="fa-solid fa-check text-brand-600 mt-1 flex-shrink-0"></i>
+                    <span>Menyalurkan bantuan sosial kemanusiaan demi peningkatan kesejahteraan masyarakat prasejahtera.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- NILAI-NILAI DETAIL -->
+          <div id="nilai" class="scroll-mt-28 border-t border-stone-100 pt-16" data-aos="fade-up">
+            <span class="text-brand-700 font-bold tracking-wider uppercase text-xs block mb-2">Prinsip Bergerak</span>
+            <h2 class="text-3xl font-bold text-stone-900 mb-8">Nilai-Nilai Yayasan</h2>
+            
+            <div class="space-y-6">
+              <!-- Budaya -->
+              <div class="flex flex-col sm:flex-row gap-6 p-6 rounded-xl border border-stone-200/50 hover:bg-stone-50 transition">
+                <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 flex-shrink-0">
+                  <i class="fa-solid fa-masks-theater text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-900 mb-2">Budaya</h3>
+                  <p class="text-stone-600 leading-relaxed text-sm">
+                    Kami memandang budaya sebagai warisan luhur yang tidak ternilai nilainya. Kami berupaya melestarikan setiap unsur tradisi Nusantara untuk memperkokoh jati diri dan kepribadian bangsa di kancah global.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Pendidikan -->
+              <div class="flex flex-col sm:flex-row gap-6 p-6 rounded-xl border border-stone-200/50 hover:bg-stone-50 transition">
+                <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 flex-shrink-0">
+                  <i class="fa-solid fa-graduation-cap text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-900 mb-2">Pendidikan</h3>
+                  <p class="text-stone-600 leading-relaxed text-sm">
+                    Mencetak generasi bangsa yang tidak hanya cerdas secara kognitif, melainkan memiliki budi pekerti luhur, berkarakter mulia, serta memiliki kepedulian tinggi terhadap kelestarian budayanya sendiri.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Kemandirian -->
+              <div class="flex flex-col sm:flex-row gap-6 p-6 rounded-xl border border-stone-200/50 hover:bg-stone-50 transition">
+                <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 flex-shrink-0">
+                  <i class="fa-solid fa-chart-line text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-900 mb-2">Kemandirian</h3>
+                  <p class="text-stone-600 leading-relaxed text-sm">
+                    Mendorong produktivitas ekonomi mandiri melalui pelatihan keterampilan kerja, pengembangan UMKM, serta pemanfaatan potensi kreatif guna memutus rantai ketergantungan sosial.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Gotong Royong -->
+              <div class="flex flex-col sm:flex-row gap-6 p-6 rounded-xl border border-stone-200/50 hover:bg-stone-50 transition">
+                <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 flex-shrink-0">
+                  <i class="fa-solid fa-people-group text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-900 mb-2">Gotong Royong</h3>
+                  <p class="text-stone-600 leading-relaxed text-sm">
+                    Mengedepankan persatuan, kolaborasi sinergis, dan kepedulian antarsesama manusia dalam mewujudkan kesejahteraan bersama tanpa membedakan latar belakang sosial.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Inovasi -->
+              <div class="flex flex-col sm:flex-row gap-6 p-6 rounded-xl border border-stone-200/50 hover:bg-stone-50 transition">
+                <div class="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 flex-shrink-0">
+                  <i class="fa-solid fa-lightbulb text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-900 mb-2">Inovasi</h3>
+                  <p class="text-stone-600 leading-relaxed text-sm">
+                    Mengintegrasikan pendekatan modern dan teknologi terkini untuk mengembangkan solusi pemecahan masalah sosial, budaya, dan lingkungan tanpa merusak nilai asli tradisi leluhur.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- LEGALITAS YAYASAN -->
+          <div id="legalitas" class="scroll-mt-28 border-t border-stone-100 pt-16" data-aos="fade-up">
+            <span class="text-brand-700 font-bold tracking-wider uppercase text-xs block mb-2">Akuntabilitas Hukum</span>
+            <h2 class="text-3xl font-bold text-stone-900 mb-8">Legalitas Yayasan</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="p-6 bg-stone-50 border border-stone-200 rounded-xl">
+                <span class="text-xs text-stone-500 font-bold uppercase tracking-wider block mb-1">Akta Pendirian</span>
+                <h4 class="text-lg font-bold text-stone-900 mb-2">Akta Pendirian Yayasan</h4>
+                <p class="text-stone-600 text-sm">Notaris Dra. Sulistyaningsih, S.H., M.Kn. No. 12 Tanggal 24 Juni 2025</p>
+              </div>
+
+              <div class="p-6 bg-stone-50 border border-stone-200 rounded-xl">
+                <span class="text-xs text-stone-500 font-bold uppercase tracking-wider block mb-1">Kemenkumham</span>
+                <h4 class="text-lg font-bold text-stone-900 mb-2">SK Kemenkumham RI</h4>
+                <p class="text-stone-600 text-sm">Nomor AHU-0010954.AH.01.04.Tahun 2025 Tanggal 26 Juni 2025</p>
+              </div>
+
+              <div class="p-6 bg-stone-50 border border-stone-200 rounded-xl">
+                <span class="text-xs text-stone-500 font-bold uppercase tracking-wider block mb-1">Perpajakan</span>
+                <h4 class="text-lg font-bold text-stone-900 mb-2">NPWP Yayasan</h4>
+                <p class="text-stone-600 text-sm">Nomor: 45.987.123.4-541.000 atas nama Yayasan Rakai Mataram Agung</p>
+              </div>
+
+              <div class="p-6 bg-stone-50 border border-stone-200 rounded-xl">
+                <span class="text-xs text-stone-500 font-bold uppercase tracking-wider block mb-1">Dinas Sosial</span>
+                <h4 class="text-lg font-bold text-stone-900 mb-2">Dokumen Perizinan Dinsos</h4>
+                <p class="text-stone-600 text-sm">Izin Operasional Lembaga Kesejahteraan Sosial (LKS) No. 503/Dinsos/2026</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRANSPARANSI LAPORAN -->
+          <div id="transparansi" class="scroll-mt-28 border-t border-stone-100 pt-16" data-aos="fade-up">
+            <span class="text-brand-700 font-bold tracking-wider uppercase text-xs block mb-2">Kepercayaan Publik</span>
+            <h2 class="text-3xl font-bold text-stone-900 mb-8">Transparansi Laporan</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- Laporan Tahunan -->
+              <div class="border border-stone-200 rounded-2xl p-8 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                  <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-700 mb-6">
+                    <i class="fa-solid fa-file-invoice text-xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-stone-900 mb-3">Laporan Tahunan</h3>
+                  <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                    Dokumen komprehensif mengenai pelaksanaan program kerja, laporan keuangan, audit, serta evaluasi dampak sosial dari seluruh inisiatif RMA Foundation selama satu tahun buku.
+                  </p>
+                </div>
+                <div>
+                  <a href="#" class="inline-flex items-center gap-2 text-brand-700 font-bold hover:text-brand-800 text-sm">
+                    Unduh Laporan Terbaru <i class="fa-solid fa-download text-xs"></i>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Laporan Donasi -->
+              <div class="border border-stone-200 rounded-2xl p-8 flex flex-col justify-between hover:shadow-md transition">
+                <div>
+                  <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-700 mb-6">
+                    <i class="fa-solid fa-hand-holding-dollar text-xl"></i>
+                  </div>
+                  <h3 class="text-xl font-bold text-stone-900 mb-3">Laporan Penyaluran Donasi</h3>
+                  <p class="text-stone-600 text-sm leading-relaxed mb-6">
+                    Laporan transparansi pertanggungjawaban atas mutasi penerimaan dana donatur publik, realisasi alokasi belanja program sosial, serta dokumentasi kegiatan penyaluran bantuan di lapangan.
+                  </p>
+                </div>
+                <div>
+                  <a href="#" class="inline-flex items-center gap-2 text-brand-700 font-bold hover:text-brand-800 text-sm">
+                    Unduh Laporan Donasi <i class="fa-solid fa-download text-xs"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="relative bg-brand-900 text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-800 via-brand-950 to-brand-950 opacity-90 z-0"></div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center" data-aos="zoom-in">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4 font-serif">Mari Berkolaborasi & Tebarkan Kebaikan</h2>
+      <p class="text-brand-200 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        Setiap bentuk dukungan Anda — baik berupa kemitraan strategis, keterlibatan sebagai relawan, maupun donasi tulus — sangat berharga demi masa depan budaya dan kemandirian bangsa.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/donasi.html" class="px-8 py-3.5 bg-white text-brand-900 hover:bg-brand-50 font-extrabold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 text-sm">
+          Donasi Sekarang <i class="fa-solid fa-heart ml-1 text-red-600 animate-pulse"></i>
+        </a>
+        <a href="/kemitraan.html" class="px-8 py-3.5 bg-brand-700 hover:bg-brand-650 text-white font-extrabold rounded-lg shadow-lg hover:shadow-xl border border-brand-500 transition-all duration-300 text-sm">
+          Gabung Kemitraan <i class="fa-solid fa-handshake ml-1"></i>
+        </a>
+        <a href="/relawan.html" class="px-8 py-3.5 bg-transparent border border-white/40 hover:border-white hover:bg-white/10 text-white font-extrabold rounded-lg transition-all duration-300 text-sm">
+          Menjadi Relawan <i class="fa-solid fa-user-plus ml-1"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-950 text-stone-400 pt-16 pb-8 border-t border-stone-900 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <!-- Kolom 1 -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-brand-700 rounded-full flex items-center justify-center text-white">
+              <i class="fa-solid fa-gopuram text-lg"></i>
+            </div>
+            <span class="text-lg font-bold tracking-wider text-white">GARDABUDAYA</span>
+          </div>
+          <p class="text-stone-500 text-sm leading-relaxed mb-6">
+            RMA Foundation berfokus pada pemajuan kebudayaan, pendidikan, ekonomi kreatif, pertanian berbasis kearifan lokal, dan aksi pemberdayaan sosial.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="w-9 h-9 bg-stone-900 hover:bg-brand-700 text-stone-400 hover:text-white rounded-full flex items-center justify-center transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-9 h-9 bg-stone-900 hover:bg-brand-700 text-stone-400 hover:text-white rounded-full flex items-center justify-center transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-9 h-9 bg-stone-900 hover:bg-brand-700 text-stone-400 hover:text-white rounded-full flex items-center justify-center transition" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="w-9 h-9 bg-stone-900 hover:bg-brand-700 text-stone-400 hover:text-white rounded-full flex items-center justify-center transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div>
+          <h4 class="text-white font-bold tracking-wider uppercase text-sm mb-6">Navigasi Cepat</h4>
+          <ul class="space-y-3.5 text-sm">
+            <li><a href="/tentang.html" class="hover:text-brand-500 transition">Tentang Kami</a></li>
+            <li><a href="/program.html" class="hover:text-brand-500 transition">Program Unggulan</a></li>
+            <li><a href="/kemitraan.html" class="hover:text-brand-500 transition">Kemitraan Strategis</a></li>
+            <li><a href="/berita.html" class="hover:text-brand-500 transition">Berita & Artikel</a></li>
+            <li><a href="/galeri.html" class="hover:text-brand-500 transition">Galeri Digital</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div>
+          <h4 class="text-white font-bold tracking-wider uppercase text-sm mb-6">Mari Berkontribusi</h4>
+          <ul class="space-y-3.5 text-sm">
+            <li><a href="/donasi.html" class="hover:text-brand-500 transition">Pilihan Donasi</a></li>
+            <li><a href="/relawan.html" class="hover:text-brand-500 transition">Pendaftaran Relawan</a></li>
+            <li><a href="/kontak.html" class="hover:text-brand-500 transition">Hubungi Kami</a></li>
+            <li><a href="/tentang.html#legalitas" class="hover:text-brand-500 transition">Legalitas Yayasan</a></li>
+            <li><a href="/tentang.html#transparansi" class="hover:text-brand-500 transition">Laporan Transparansi</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 4 -->
+        <div>
+          <h4 class="text-white font-bold tracking-wider uppercase text-sm mb-6">Sekretariat</h4>
+          <ul class="space-y-4 text-sm text-stone-500">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-brand-600 mt-1 flex-shrink-0"></i>
+              <span>Yogyakarta, Indonesia</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-brand-600 flex-shrink-0"></i>
+              <a href="mailto:info@gardabudaya.org" class="hover:text-white transition">info@gardabudaya.org</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-brand-600 flex-shrink-0"></i>
+              <span>+62 821-4125-9701</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-stone-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-600">
+        <p>Copyright &copy; 2026 RMA Foundation. All rights reserved.</p>
+        <p class="font-serif italic text-stone-700">Hamemayu Hayuning Bawono</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS script & init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-in-out',
+    });
+  </script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

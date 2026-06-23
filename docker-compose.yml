@@ -1,0 +1,14 @@
+services:
+  gardabudaya:
+    container_name: gardabudaya
+    image: gardabudaya
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - FIREBASE_REFRESH_TOKEN=${FIREBASE_REFRESH_TOKEN}
+      - FIREBASE_EMAIL=${FIREBASE_EMAIL:-setopratama@gmail.com}
+    command: npm run serve

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relawan - Gardabudaya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdfaf2', 100: '#fbeedb', 200: '#f6daa9', 300: '#eebd6a',
+              400: '#e59d35', 500: '#ca7d1d', 600: '#b06115', 700: '#904713',
+              800: '#753914', 900: '#5f2f13', 950: '#341607',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-stone-50 text-stone-800 flex flex-col min-h-screen">
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="flex items-center gap-3"><div class="w-12 h-12 bg-brand-700 rounded-full flex items-center justify-center text-white shadow-md"><i class="fa-solid fa-gopuram text-2xl"></i></div><div><span class="block text-xl font-bold tracking-wider text-brand-800 leading-none">GARDABUDAYA</span><span class="block text-xs text-stone-500 font-medium tracking-wide mt-1">Yayasan Rakai Mataram Agung</span></div></a>
+        <nav class="hidden lg:flex items-center gap-8 font-medium text-stone-600">
+          <a href="/" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2">Beranda</a>
+          <a href="/tentang.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2">Tentang</a>
+          <a href="/program.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2">Program</a>
+          <a href="/kemitraan.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2">Kemitraan</a>
+          <a href="/berita.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2">Berita</a>
+          <a href="/galeri.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2">Galeri</a>
+          <a href="/relawan.html" class="text-brand-700 border-b-2 border-brand-700 px-1 py-2">Relawan</a>
+          <a href="/kontak.html" class="hover:text-brand-700 border-b-2 border-transparent hover:border-brand-700 px-1 py-2">Kontak</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="/donasi.html" class="hidden sm:inline-flex px-5 py-2.5 bg-brand-700 hover:bg-brand-800 text-white font-semibold rounded-lg shadow-md transition text-sm"><i class="fa-solid fa-heart mr-1"></i> Donasi</a>
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-stone-600 hover:text-brand-700 transition"><i class="fa-solid fa-bars text-2xl"></i></button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-stone-200 bg-white shadow-inner">...</div>
+  </header>
+
+  <section class="bg-stone-900 text-white py-12 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#e59d35_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex text-xs uppercase tracking-widest text-brand-300 font-semibold mb-3 gap-2 items-center"><a href="/" class="hover:text-white transition">Beranda</a><span class="text-stone-600">/</span><span class="text-stone-300">Relawan</span></nav>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Menjadi Relawan</h1>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-brand-700 font-bold tracking-wider uppercase text-xs">Kontribusi Sosial</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-stone-900 mt-2 mb-4">Jadilah Bagian dari Perubahan</h2>
+        <p class="text-stone-600">Bergabunglah sebagai relawan RMA Foundation dan berkontribusi langsung dalam gerakan pelestarian budaya, pendidikan, dan pemberdayaan masyarakat.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16" data-aos="fade-up">
+        <div class="p-6 bg-brand-50/30 rounded-xl border border-brand-100/60 text-center hover:shadow-md transition"><div class="w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 mx-auto mb-4"><i class="fa-solid fa-chalkboard-user text-xl"></i></div><h3 class="font-bold text-stone-900">Relawan Pendidikan</h3><p class="text-xs text-stone-600 mt-2">Mengajar di PAUD/TK, PKBM, dan sanggar belajar</p></div>
+        <div class="p-6 bg-amber-50/30 rounded-xl border border-amber-100/60 text-center hover:shadow-md transition"><div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center text-amber-700 mx-auto mb-4"><i class="fa-solid fa-masks-theater text-xl"></i></div><h3 class="font-bold text-stone-900">Relawan Budaya</h3><p class="text-xs text-stone-600 mt-2">Dokumentasi, workshop seni, festival budaya</p></div>
+        <div class="p-6 bg-red-50/30 rounded-xl border border-red-100/60 text-center hover:shadow-md transition"><div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center text-red-700 mx-auto mb-4"><i class="fa-solid fa-hand-holding-heart text-xl"></i></div><h3 class="font-bold text-stone-900">Relawan Sosial</h3><p class="text-xs text-stone-600 mt-2">Bedah rumah, bakti sosial, program kemanusiaan</p></div>
+        <div class="p-6 bg-blue-50/30 rounded-xl border border-blue-100/60 text-center hover:shadow-md transition"><div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 mx-auto mb-4"><i class="fa-solid fa-camera text-xl"></i></div><h3 class="font-bold text-stone-900">Relawan Media</h3><p class="text-xs text-stone-600 mt-2">Fotografi, videografi, konten kreatif, humas</p></div>
+      </div>
+
+      <div class="max-w-2xl mx-auto bg-stone-50 rounded-2xl p-8 border border-stone-200 flex flex-col items-center justify-center text-center min-h-[250px]" data-aos="fade-up">
+        <div class="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 mb-5">
+          <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-stone-900 mb-3">Pendaftaran Relawan</h3>
+        <p class="text-stone-600 text-sm leading-relaxed max-w-md">
+          Pendaftaran relawan saat ini dapat dilakukan melalui WhatsApp. Hubungi kami untuk informasi lebih lanjut dan konfirmasi pendaftaran.
+        </p>
+        <a href="https://wa.me/6282141259701" class="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition">
+          <i class="fa-brands fa-whatsapp"></i> Daftar via WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-stone-950 text-stone-400 pt-16 pb-8 border-t border-stone-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div><div class="flex items-center gap-3 mb-6"><div class="w-10 h-10 bg-brand-700 rounded-full flex items-center justify-center text-white"><i class="fa-solid fa-gopuram text-lg"></i></div><span class="text-lg font-bold tracking-wider text-white">GARDABUDAYA</span></div><p class="text-stone-500 text-sm leading-relaxed mb-6">RMA Foundation berfokus pada pemajuan kebudayaan, pendidikan, ekonomi kreatif, dan pemberdayaan sosial.</p></div>
+        <div><h4 class="text-white font-bold tracking-wider uppercase text-sm mb-6">Navigasi Cepat</h4><ul class="space-y-3.5 text-sm"><li><a href="/tentang.html" class="hover:text-brand-500 transition">Tentang Kami</a></li><li><a href="/program.html" class="hover:text-brand-500 transition">Program Unggulan</a></li><li><a href="/kemitraan.html" class="hover:text-brand-500 transition">Kemitraan Strategis</a></li><li><a href="/berita.html" class="hover:text-brand-500 transition">Berita & Artikel</a></li><li><a href="/galeri.html" class="hover:text-brand-500 transition">Galeri Digital</a></li></ul></div>
+        <div><h4 class="text-white font-bold tracking-wider uppercase text-sm mb-6">Mari Berkontribusi</h4><ul class="space-y-3.5 text-sm"><li><a href="/donasi.html" class="hover:text-brand-500 transition">Pilihan Donasi</a></li><li><a href="/relawan.html" class="hover:text-brand-500 transition">Pendaftaran Relawan</a></li><li><a href="/kontak.html" class="hover:text-brand-500 transition">Hubungi Kami</a></li><li><a href="/tentang.html#legalitas" class="hover:text-brand-500 transition">Legalitas Yayasan</a></li><li><a href="/tentang.html#transparansi" class="hover:text-brand-500 transition">Laporan Transparansi</a></li></ul></div>
+        <div><h4 class="text-white font-bold tracking-wider uppercase text-sm mb-6">Sekretariat</h4><ul class="space-y-4 text-sm text-stone-500"><li class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-brand-600 mt-1"></i> Yogyakarta, Indonesia</li><li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-600"></i> <a href="mailto:info@gardabudaya.org" class="hover:text-white transition">info@gardabudaya.org</a></li><li class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-600"></i> +62 821-4125-9701</li></ul></div>
+      </div>
+      <div class="border-t border-stone-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-600"><p>Copyright &copy; 2026 RMA Foundation. All rights reserved.</p><p class="font-serif italic text-stone-700">Hamemayu Hayuning Bawono</p></div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({duration:1000,once:true,easing:'ease-in-out'});</script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

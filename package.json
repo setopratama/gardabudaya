@@ -1,0 +1,12 @@
+{
+  "name": "gardabudaya",
+  "version": "1.0.0",
+  "description": "Gardabudaya - Firebase Hosting",
+  "scripts": {
+    "deploy": "firebase deploy --only hosting --project gardabudaya-dev",
+    "serve": "firebase emulators:start --only hosting --project gardabudaya-dev"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.0.0"
+  }
+}
