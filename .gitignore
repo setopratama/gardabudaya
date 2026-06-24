@@ -1,0 +1,5 @@
+.firebase/
+database-debug.log
+firestore-debug.log
+firebase-debug.log
+node_modules/
